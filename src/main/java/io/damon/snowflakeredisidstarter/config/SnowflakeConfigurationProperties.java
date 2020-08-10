@@ -2,6 +2,9 @@ package io.damon.snowflakeredisidstarter.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
+/**
+ * @author Bwolf
+ */
 @ConfigurationProperties("damon.snowflake")
 public class SnowflakeConfigurationProperties {
 

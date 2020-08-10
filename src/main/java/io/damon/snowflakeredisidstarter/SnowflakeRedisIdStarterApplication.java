@@ -3,6 +3,9 @@ package io.damon.snowflakeredisidstarter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * @author Bwolf
+ */
 @SpringBootApplication
 public class SnowflakeRedisIdStarterApplication {
 
