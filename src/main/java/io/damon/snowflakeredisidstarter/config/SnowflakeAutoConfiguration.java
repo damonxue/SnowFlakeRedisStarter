@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 import org.springframework.data.redis.core.RedisTemplate;
 
 /**
@@ -31,6 +32,7 @@ public class SnowflakeAutoConfiguration {
     private RedisTemplate redisTemplate;
 
     @Bean
+    @Scope("singleton")
     public SnowflakeIdWorker snowflakeIdWorker() {
         // 如果分布式redis集群没有此key, 则 0 -> 1
         Long workerId = redisTemplate.opsForValue().increment(ID_REDIS_KEY, 1);
